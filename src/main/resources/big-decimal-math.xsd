@@ -1,0 +1,30 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://lsh.assignment.soap/models/soap/emp"
+           targetNamespace="http://lsh.assignment.soap/models/soap/emp"
+           elementFormDefault="qualified">
+
+    <xs:element name="getBigDecimalMathRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="operand1" type="xs:decimal"/>
+                <xs:element name="operand2" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getBigDecimalMathResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bigDecimalMath" type="tns:bigDecimalMath"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="bigDecimalMath">
+        <xs:sequence>
+            <xs:element name="sum" type="xs:decimal"/>
+            <xs:element name="multiplication" type="xs:decimal"/>
+            <xs:element name="division" type="xs:decimal"/>
+            <xs:element name="errors" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
