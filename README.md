@@ -1,5 +1,5 @@
-# lsh-assignment-soap
-SOAP web service task (incomplete).
+# lsh-assignment-soap (incomplete)
+SOAP web service task.
 Main depedencies used:
 * Spring Boot
 * wsdl4j
